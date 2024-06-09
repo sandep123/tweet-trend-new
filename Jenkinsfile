@@ -16,12 +16,9 @@ environment {
             }
 
         }
-        node {
-  stage('SCM') {
-    git 'https://github.com/foo/bar.git'
-  }
-  stage('SonarQube analysis') {
-
+        
+    
+    stage('SonarQube analysis') {
     environment {
         scannerHome = tool 'valaxy-sonar-scanner';
     }
